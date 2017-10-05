@@ -1,0 +1,168 @@
+.filter
+	width 100%
+	height 65px
+	background-color white
+	margin-bottom 45px
+	border-bottom 1px solid #e2dee0
+
+.filter__inner
+	width rem(980rem)
+	display flex
+	flex-wrap wrap
+	align-items center
+	justify-content space-between
+	margin 0px auto
+	background-color white
+	// background-color rgba(133,55,233, 0.2)
+
+.filter__time
+	display flex
+	justify-content space-between
+	width 270px
+	padding-top 10px
+
+.filter__link
+	font-size rem(12rem)
+	line-height rem(48rem)
+	color colorLightGray
+	text-transform uppercase
+	text-decoration none
+
+.filter__link-active
+	color colorRed
+
+.filter__location
+	width 260px
+	padding-top 10px
+
+.filter-form
+	display flex
+	justify-content space-around
+
+
+.filter-form__select
+	width 120px
+	box-sizing border-box
+	padding 12.5px 12.5px 12.5px 20px
+	border 1px solid rgba(150,165,167,.5)
+	border-radius 25px/30px
+	background-color rgba(255,255,255, 0.1)
+	color colorLightGray
+	-webkit-appearance none
+	-moz-appearance none
+	-ms-appearance none
+	appearance none
+	outline none
+	text-transform uppercase
+	font-size rem(12rem)
+	font-family 'GTM-Medium'
+
+	&:hover
+		border 1px solid colorLightGray
+		transition border 0.215s
+
+	option
+		color black
+		background-color #e2dee0
+		font-size rem(14rem)
+		font-weight normal
+
+
+.filter-form__wrapper
+	position relative
+
+
+.svg-sprites__button--filter
+	position absolute
+	top 14px
+	left 85px
+	size(rem(13rem), rem(13rem))
+	pointer-events none // выключает события клика мышки по элементу
+	fill colorLightGray
+
+
+.btn-ellipse--filter
+	width 125px
+	min-height auto
+	height 40px
+	padding 0px
+	padding-right 20px
+	background-color white
+	box-shadow none
+	border 1px solid rgba(150,165,167,.5)
+	color colorLightGray
+	font-size rem(12rem)
+	line-height rem(24rem)
+
+	&:hover
+		background-color transparent
+		box-shadow none
+		border 1px solid colorLightGray
+
+
+.svg-sprites__button--location
+	position absolute
+	top 12px
+	left 95px
+	size(rem(13rem), rem(13rem))
+	pointer-events none // выключает события клика мышки по элементу
+	padding-right 20px
+	fill colorLightGray
+
+
+
+// 3 block
+
+.filter__tag
+	width 305px
+	display flex
+	align-items flex-start
+	justify-content space-between
+	padding-top 10px
+
+.filter__tag-name
+	align-self center
+	text-transform uppercase
+	color colorLightGray
+
+.svg-sprites__tag
+	height rem(25rem)
+	width rem(25rem)
+
+.filter__circle-wrapper
+	box-sizing border-box
+	width 42px
+	padding 5px 0px
+	background-color colorLightGray
+	border-radius 50%
+	text-align center
+
+.svg-sprites__tag--house
+.svg-sprites__tag--personal
+.svg-sprites__tag--music
+	stroke-width 15px
+	stroke white
+
+.svg-sprites__tag--education
+	height rem(30rem)
+	width rem(30rem)
+
+.svg-sprites__tag--music
+	padding-right 4px
+
+
+
+
+
+.filter__circle-wrapper--education
+	padding 2.5px 0px
+
+
+.filter__circle-wrapper--green
+	background-color colorGreen
+
+.filter__circle-wrapper--orange
+	background-color colorOrange
+
+.filter__circle-wrapper--purple
+	background-color colorPurple

@@ -1,0 +1,137 @@
+html
+	font-size font-size  //14px
+	line-height base-line-height
+
+body
+	font-family 'GTM-Medium'
+	color black
+	background-color colorBg
+	font-size font-size  //14px
+
+@font-face {
+	font-family GTM-Book
+	src url(../fonts/GTM-Book.woff) format('woff')
+	font-weight 400
+	font-style normal
+}
+
+@font-face {
+	font-family GTM-Medium
+	src url(../fonts/GTM-Medium.woff) format('woff')
+	font-weight 400
+	font-style normal
+}
+
+@font-face {
+	font-family GTM-Bold
+	src url(../fonts/GTM-Bold.woff) format('woff')
+	font-weight 700
+	font-style normal
+}
+
+
+// mast have img
+img
+	max-width 100%  // or width 100% но max-width лучше, так как не растянется больше чем свой оригинальный размер
+	height auto
+
+
+.load-more
+	position relative
+	font-family 'GTM-Medium'
+	color colorBlackGray
+	line-height rem(28rem)
+	border none
+	background-color transparent
+	cursor pointer
+
+
+.svg-sprites
+	width rem(40rem)
+	fill #fff
+
+.btn
+	position relative
+	border none
+	outline none
+	margin 0px
+	padding 10px 10px
+	text-transform uppercase
+	width 150px
+	max-width 150px
+	min-height 75px
+	max-height 75px
+	overflow hidden
+	// text-overflow ellipsis
+	overflow-wrap break-word
+	word-wrap break-word
+	font-family 'GTM-Medium', Arial, Verdana, sans-serif
+	background-color colorRed
+	color white
+	cursor pointer
+
+
+
+// placeholder text
+// Добавить в снипет, это глобальные стили для цвет Плейсхолдеров
+
+
+input:-ms-input-placeholder  //for IE  (Глобально (:-ms-input-placeholder) не работает, нужно указывать цель)
+	color white
+	font-size 16px
+
+
+::-ms-input-placeholder  // for Edge
+	color white
+	font-size 16px
+
+
+::-moz-placeholder
+	color white
+	font-size 16px
+	opacity 1  // иначе присутствует прозрачность
+
+::-webkit-input-placeholder
+	color white
+	font-size 16px
+
+
+
+
+
+
+
+
+
+// svg
+svg
+	width 25px
+	height 25px
+
+.s1
+	margin-top 150px
+
+.s11
+	width 170px
+	outline 1px dashed red
+
+.svg-star
+	fill none
+	stroke-width 30px
+	stroke orange
+	margin-right -3px
+
+.svg-star--on
+	fill orange
+
+.svg-star--off
+	fill none
+
+.svg-star--small
+	width 16px
+	height 16px
+
+
+.svg-star--big
+	width 22px
+	height 22px
