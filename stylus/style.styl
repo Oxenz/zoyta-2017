@@ -2,9 +2,16 @@
 @import "mixins.styl"
 @import "global/custom.styl"
 
-@import "block/header.styl"
-@import "block/search.styl"
-@import "block/filter.styl"
-@import "block/offer.styl"
-@import "block/services.styl"
-@import "block/footer.styl"
+@import "block/1-header.styl"
+@import "block/2-search.styl"
+@import "block/3-filter.styl"
+@import "block/4-offer.styl"
+@import "block/5-services.styl"
+@import "block/6-footer.styl"
+
+
+// Порядок подключение [ ВАЖЕН ]
+// Данные стили должны подключаться последним файлом
+
+// Динамически переопределяющие заготовки .классов
+@import "global/dynamic.styl"

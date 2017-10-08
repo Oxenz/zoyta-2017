@@ -4,20 +4,20 @@
 	background-size cover
 
 
-.search__inner
-	display flex
-	flex-wrap wrap
-	justify-content space-around
-	margin 0 auto
-	width rem(490rem)
+	&__inner
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+		margin 0 auto
+		width rem(490rem)
 
 
-.search__caption
-	margin-top 50px
-	font-size rem(30rem)
-	line-height rem(48rem)
-	font-weight 400
-	color white
+	&__caption
+		margin-top 50px
+		font-size rem(30rem)
+		line-height rem(48rem)
+		font-weight 400
+		color white
 
 
 .search-form
@@ -26,31 +26,30 @@
 	justify-content space-around
 
 
+	&__wrapper
+		position relative
 
-.search-form__wrapper
-	position relative
 
+	&__select
+		width 220px
+		padding 20px
+		box-sizing border-box
+		border 1px solid rgba(255,255,255, 0.2)
+		border-radius 25px/30px
+		background-color rgba(255,255,255, 0.1)
+		color white
+		-webkit-appearance none
+		-moz-appearance none
+		-ms-appearance none
+		appearance none
+		outline none
+		font-size rem(18rem)
+		font-family 'GTM-Book'
+		box-shadow 1px 1px 2px 0px rgba(1,1,1, 0.3)
 
-.search-form__select
-	width 220px
-	box-sizing border-box
-	padding 20px
-	border 1px solid rgba(255,255,255, 0.2)
-	border-radius 25px/30px
-	background-color rgba(255,255,255, 0.1)
-	color white
-	-webkit-appearance none
-	-moz-appearance none
-	-ms-appearance none
-	appearance none
-	outline none
-	font-size rem(18rem)
-	font-family 'GTM-Book'
-	box-shadow 1px 1px 2px 0px rgba(1,1,1, 0.3)
-
-	&:hover
-		border 1px solid rgba(255,255,255, 0.7)
-		transition border 0.215s
+		&:hover
+			border 1px solid rgba(255,255,255, 0.7)
+			transition border 0.215s
 
 select::-ms-expand
 	display none
@@ -80,12 +79,14 @@ select::-ms-expand
 	font-weight normal
 
 
-.svg-sprites__button
-	position absolute
+.search__arrow-down
 	top 25px
 	left 185px
-	size(rem(13rem), rem(13rem))
-	pointer-events none // выключает события клика мышки по элементу
+	fill white
+
+
+
+
 
 
 .btn-ellipse

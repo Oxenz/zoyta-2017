@@ -9,125 +9,125 @@
 	<!-- <link rel='stylesheet' href='css/gtm-fonts.css' /> -->
 </head>
 <body>
-	<header class='header'>
-		<nav class='main-nav'>
-			<ul class='main-nav__list'>
-				<li><img class='logotype' src='img/logo-zoyta.svg' alt='logotype company' /></li>
-				<li><a class='main-nav__link' href='#'>Reality</a></li>
-				<li><a class='main-nav__link' href='#'>Living</a></li>
-				<li><a class='main-nav__link' href='#'>Education</a></li>
-				<li><a class='main-nav__link' href='#'>Entartainment</a></li>
-				<li><a class='main-nav__link' href='#'>Mobility</a></li>
-				<li><a class='main-nav__link  main-nav__link--down' href='#idfooter'><svg class='svg-sprites  svg-sprites__arrow-down'><use xlink:href="svg-sprites/sprite-symbol.svg#arrow-down"></use></svg></a></li>
-				<li>
-					<button class="btn  btn__login">Login<svg class='svg-sprites  svg-sprites__user'><use xlink:href="svg-sprites/sprite-symbol.svg#user"></use></svg></button>
-				</li>
-			</ul>
-		</nav>
-	</header>
+<header class='header'>
+	<nav class='main-nav'>
+		<ul class='main-nav__list'>
+			<li><img class='logotype' src='img/logo-zoyta.svg' alt='ZoYta logotype company' /></li>
+			<li><a class='main-nav__link' href='#'>Reality</a></li>
+			<li><a class='main-nav__link' href='#'>Living</a></li>
+			<li><a class='main-nav__link' href='#'>Education</a></li>
+			<li><a class='main-nav__link' href='#'>Entartainment</a></li>
+			<li><a class='main-nav__link' href='#'>Mobility</a></li>
+			<li><a class='main-nav__link  main-nav__link--down' href='#footer-anchor'><svg class='main-nav__arrow-down'><use xlink:href="svg-sprites/sprite-symbol.svg#arrow-down"></use></svg></a></li>
+			<li>
+				<button class="btn  btn__login">Login<svg class='main-nav__user'><use xlink:href="svg-sprites/sprite-symbol.svg#user"></use></svg></button>
+			</li>
+		</ul>
+	</nav>
+</header>
 
-	<section class='search'>
-		<div class='search__inner'>
-			<h2 class='search__caption'>What are you loking for?</h2>
+<section class='search'>
+	<div class='search__inner'>
+		<h2 class='search__caption'>What are you loking for?</h2>
+		<form class='search-form' method='post' action='https://echo.htmlacademy.ru' >
+			<div class='search-form__wrapper'>
+				<select class='search-form__select' name='search-select-first'>
+					<option value='Значение1'>Dubai</option>
+					<option value='Значение2'>Beijing</option>
+					<option value='Значение3'>Tokyo</option>
+					<option value='Значение4'>Oslo</option>
+				</select>
+				<svg class='svg-button  svg-button--SIZE  search__arrow-down'><use xlink:href="svg-sprites/sprite-symbol.svg#arrow-down"></use></svg>
+			</div>
+			<div class='search-form__wrapper'>
+				<select class='search-form__select' name='search-select-second'>
+					<option value='Значение1'>Education</option>
+					<option value='Значение2'>Music</option>
+					<option value='Значение3'>Hostel</option>
+					<option value='Значение4'>Travel</option>
+					<option value='Значение4'>Personal</option>
+				</select>
+				<svg class='svg-button  svg-button--SIZE  search__arrow-down'><use xlink:href="svg-sprites/sprite-symbol.svg#arrow-down"></use></svg>
+			</div>
+			<input class='search-form__select  search-form__input' name='search-text' placeholder='Kyeword, name, date, time...'>
+			<button class='btn  btn-ellipse' type='submit' value='search'>Search</button>
+		</form>
+	</div>
+</section>
 
-			<form class='search-form' method='post' action='https://echo.htmlacademy.ru' >
+<aside class='filter'>
+	<div class='filter__inner'>
 
-				<div class='search-form__wrapper'>
-					<select class='search-form__select' name='search-select-first'>
+		<div class='filter__time'>
+			<a class='filter__link  filter__link-active' href='#'>Recommended</a>
+			<a class='filter__link' href='#'>Latest</a>
+			<a class='filter__link' href='#'>Highlights</a>
+		</div>
+
+		<div class='filter__location'>
+			<form class='filter-form' method='post' action='https://echo.htmlacademy.ru' >
+				<div class='filter-form__wrapper'>
+					<select class='filter-form__select' name='anonymous-select-country'>
 						<option value='Значение1'>Dubai</option>
 						<option value='Значение2'>Beijing</option>
 						<option value='Значение3'>Tokyo</option>
 						<option value='Значение4'>Oslo</option>
 					</select>
-					<svg class='svg-sprites  svg-sprites__button'><use xlink:href="svg-sprites/sprite-symbol.svg#arrow-down"></use></svg>
+					<svg class='svg-button  svg-button--SIZE  filter__arrow-down'><use xlink:href="svg-sprites/sprite-symbol.svg#arrow-down"></use></svg>
 				</div>
-
-				<div class='search-form__wrapper'>
-					<select class='search-form__select' name='search-select-second'>
-						<option value='Значение1'>Education</option>
-						<option value='Значение2'>Music</option>
-						<option value='Значение3'>Hostel</option>
-						<option value='Значение4'>Travel</option>
-						<option value='Значение4'>Personal</option>
-					</select>
-					<svg class='svg-sprites  svg-sprites__button'><use xlink:href="svg-sprites/sprite-symbol.svg#arrow-down"></use></svg>
-				</div>
-
-				<input class='search-form__select  search-form__input' name='search-text' placeholder='Kyeword, name, date, time...'>
-
-				<button class='btn  btn-ellipse' type='submit' value='search'>Search</button>
-
+				<button class='btn  btn-ellipse  btn-ellipse--filter' type='button' value='search'>show map<svg class='svg-button  svg-button--SIZE  filter__marker'><use xlink:href="svg-sprites/sprite-symbol.svg#marker"></use></svg></button>
 			</form>
 		</div>
-	</section>
 
-	<aside class='filter'>
-		<div class='filter__inner'>
-			<div class='filter__time'>
-				<a class='filter__link  filter__link-active' href='#'>Recommended</a>
-				<a class='filter__link' href='#'>Latest</a>
-				<a class='filter__link' href='#'>Highlights</a>
+		<div class='filter__tag'>
+			<span class='filter__tag-name'>Filter:</span>
+			<div class='svg-wr  svg-wr--filter  svg-wr--green'>
+				<svg class='svg  svg-stroke  svg--house'>
+					<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
+				</svg>
 			</div>
-			<div class='filter__location'>
-				<form class='filter-form' method='post' action='https://echo.htmlacademy.ru' >
-					<div class='filter-form__wrapper'>
-						<select class='filter-form__select' name='anonymous-select-country'>
-							<option value='Значение1'>Dubai</option>
-							<option value='Значение2'>Beijing</option>
-							<option value='Значение3'>Tokyo</option>
-							<option value='Значение4'>Oslo</option>
-						</select>
-						<svg class='svg-sprites  svg-sprites__button  svg-sprites__button--filter'><use xlink:href="svg-sprites/sprite-symbol.svg#arrow-down"></use></svg>
-					</div>
-					<button class='btn  btn-ellipse  btn-ellipse--filter' type='button' value='search'>show map<svg class='svg-sprites  svg-sprites__button--location'><use xlink:href="svg-sprites/sprite-symbol.svg#marker"></use></svg></button>
-				</form>
+			<div class='svg-wr  svg-wr--filter  '>
+				<svg class='svg  svg-stroke  svg--personal'>
+					<use xlink:href='svg-sprites/sprite-symbol.svg#girl'></use>
+				</svg>
 			</div>
-			<div class='filter__tag'>
-				<span class='filter__tag-name'>Filter:</span>
-				<div class='filter__circle-wrapper  filter__circle-wrapper--green'>
-					<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--house'>
-						<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
-					</svg>
-				</div>
-				<div class='filter__circle-wrapper'>
-					<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--personal'>
-						<use xlink:href='svg-sprites/sprite-symbol.svg#girl'></use>
-					</svg>
-				</div>
-				<div class='filter__circle-wrapper  filter__circle-wrapper--education'>
-					<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--education'>
-						<use xlink:href='svg-sprites/sprite-symbol.svg#education'></use>
-					</svg>
-				</div>
-				<div class='filter__circle-wrapper  filter__circle-wrapper--orange'>
-					<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--music'>
-						<use xlink:href='svg-sprites/sprite-symbol.svg#music'></use>
-					</svg>
-				</div>
-				<div class='filter__circle-wrapper  filter__circle-wrapper--purple'>
-					<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--train'>
-						<use xlink:href='svg-sprites/sprite-symbol.svg#train'></use>
-					</svg>
-				</div>
+			<div class='svg-wr  svg-wr--filter  '>
+				<svg class='svg  svg--education'>
+					<use xlink:href='svg-sprites/sprite-symbol.svg#education'></use>
+				</svg>
+			</div>
+			<div class='svg-wr  svg-wr--filter  svg-wr--orange'>
+				<svg class='svg  svg-stroke  svg--music'>
+					<use xlink:href='svg-sprites/sprite-symbol.svg#music'></use>
+				</svg>
+			</div>
+			<div class='svg-wr  svg-wr--filter  svg-wr--purple'>
+				<svg class='svg  svg--train'>
+					<use xlink:href='svg-sprites/sprite-symbol.svg#train'></use>
+				</svg>
 			</div>
 		</div>
-	</aside>
+
+	</div>
+</aside>
 
 
 <!-- mian -->
 
 
 <main class='offer'>
-	<section class='offer__service  offer__service--house'>
+	<section class='offer__box  offer__box--house'>
 		<div class='offer__price'>$2,990</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/h7.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--house'>
+
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
 			</svg>
 		</div>
+
 		<h2 class='offer__caption'>2 bedroom house for rent in Dubai</h2>
 		<div class='offer__type'>Vision Agency</div>
 		<div class='offer__raiting'>
@@ -141,13 +141,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--music'>
+	<section class='offer__box  offer__box--music'>
 		<div class='offer__price'>€750</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/m1.jpg' alt='Image cute music party'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--music'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--music'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#music'></use>
 			</svg>
 		</div>
@@ -164,13 +164,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--train'>
+	<section class='offer__box  offer__box--train'>
 		<div class='offer__price'>$290</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/a1.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--train'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg--train'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#train'></use>
 			</svg>
 		</div>
@@ -187,13 +187,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--house'>
+	<section class='offer__box  offer__box--house'>
 		<div class='offer__price'></div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/h5.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--house'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
 			</svg>
 		</div>
@@ -209,14 +209,14 @@
 		</div>
 	</section>
 
-
-	<section class='offer__service-extended  offer__service--music'>
+<!-- 2 СТРОКА -->
+	<section class='offer__box-extended  offer__box--music'>
 		<div class='offer__price'>$1,105</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/m-f-1.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--music'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--music'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#music'></use>
 			</svg>
 		</div>
@@ -250,13 +250,13 @@
 	</section>
 
 
-	<section class='offer__service-extended  offer__service--house'>
+	<section class='offer__box-extended  offer__box--house'>
 		<div class='offer__priceMOD'></div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/h-f-1.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--house'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
 			</svg>
 		</div>
@@ -291,13 +291,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--house'>
+	<section class='offer__box  offer__box--house'>
 		<div class='offer__price'>€650</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/h1.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--house'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
 			</svg>
 		</div>
@@ -314,13 +314,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--music'>
+	<section class='offer__box  offer__box--music'>
 		<div class='offer__price'></div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/m2.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--music'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--music'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#music'></use>
 			</svg>
 		</div>
@@ -337,13 +337,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--train'>
+	<section class='offer__box  offer__box--train'>
 		<div class='offer__price'>$1600</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/h3.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--train'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg--train'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#train'></use>
 			</svg>
 		</div>
@@ -360,13 +360,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--house'>
+	<section class='offer__box  offer__box--house'>
 		<div class='offer__price'></div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/h4.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--house'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
 			</svg>
 		</div>
@@ -384,13 +384,13 @@
 
 
 
-	<section class='offer__service-extended  offer__service--music'>
+	<section class='offer__box-extended  offer__box--music'>
 		<div class='offer__price'>$3,370</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/m-f-2.jpg' alt='Image club party'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--music'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--music'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#music'></use>
 			</svg>
 		</div>
@@ -424,13 +424,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--house'>
+	<section class='offer__box  offer__box--house'>
 		<div class='offer__price'>$1700</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/h2.jpg' alt='Image cute hostel'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--house'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
 			</svg>
 		</div>
@@ -447,13 +447,13 @@
 	</section>
 
 
-	<section class='offer__service  offer__service--music'>
+	<section class='offer__box  offer__box--music'>
 		<div class='offer__price'>$350</div>
 		<div class='offer__img-wrapper'>
 			<img class='offer__img' src='img/m3.jpg' alt='Image cute music party'></img>
 		</div>
-		<div class='offer__circle-wrapper'>
-			<svg class='svg-sprites  svg-sprites__tag--music'>
+		<div class='svg-wr  svg-wr--offer'>
+			<svg class='svg  svg-stroke  svg--music'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#music'></use>
 			</svg>
 		</div>
@@ -475,32 +475,32 @@
 <section class='services'>
 	<div class='services__caption-wrapper'>
 		<h1 class='services__caption'>What can Zoyta offer to you?</h1>
-		<p class='services__title'>Etiam cursus ipsum quis enim faucibus</p>
+		<p class='services__title'>And this is only a fraction of our capabilities</p>
 	</div>
 
 	<div class='services__tag'>
-		<div class='services__circle-wrapper  services__circle-wrapper--house'>
-			<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--house'>
+		<div class='svg-wr  svg-wr--services'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#house'></use>
 			</svg>
 		</div>
-		<div class='services__circle-wrapper  services__circle-wrapper--personal'>
-			<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--personal'>
+		<div class='svg-wr  svg-wr--services'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#girl'></use>
 			</svg>
 		</div>
-		<div class='services__circle-wrapper  services__circle-wrapper--education'>
-			<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--education'>
+		<div class='svg-wr  svg-wr--services'>
+			<svg class='svg  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#education'></use>
 			</svg>
 		</div>
-		<div class='services__circle-wrapper  services__circle-wrapper--music'>
-			<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--music'>
+		<div class='svg-wr  svg-wr--services'>
+			<svg class='svg  svg-stroke  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#music'></use>
 			</svg>
 		</div>
-		<div class='services__circle-wrapper  services__circle-wrapper--train'>
-			<svg class='svg-sprites  svg-sprites__tag  svg-sprites__tag--train'>
+		<div class='svg-wr  svg-wr--services'>
+			<svg class='svg  svg--house'>
 				<use xlink:href='svg-sprites/sprite-symbol.svg#train'></use>
 			</svg>
 		</div>
@@ -509,82 +509,77 @@
 	<div class='services__bid-wrapper'>
 		<div class='services__bid-first'>
 			<div class='services__bid-icon'>
-				<div class='services__circle-wrapper'>
-					<svg class='svg-sprites  services__bid-svg'>
+				<div class='svg-wr  svg-wr--services-bid'>
+					<svg class='svg  svg--lightning'>
 						<use xlink:href='svg-sprites/sprite-symbol.svg#lightning'></use>
 					</svg>
 				</div>
 			</div>
 			<div class='services__bid-text'>
-				<h2 class='services__bid-caption'>Zagolovok1</h2>
-				<div class='services__bid-description'>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est. In hendrerit, massa at.</div>
+				<h2 class='services__bid-caption'>Fulminant</h2>
+				<p class='services__bid-description'>According to foreseen researches, our platform of search and delivery of the finished result is the fastest in the market. This is achieved by an integrated approach consisting of advanced technologies and lightning-fast hosting.</p>
 			</div>
 		</div>
 
 		<div class='services__bid-second'>
 			<div class='services__bid-icon'>
-				<div class='services__circle-wrapper'>
-					<svg class='svg-sprites  services__bid-svg'>
+				<div class='svg-wr  svg-wr--services-bid'>
+					<svg class='svg  svg--leaf'>
 						<use xlink:href='svg-sprites/sprite-symbol.svg#leaf'></use>
 					</svg>
 				</div>
 			</div>
 			<div class='services__bid-text'>
-				<h2 class='services__bid-caption'>Zagolovok2</h2>
-				<div class='services__bid-description'>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est. In hendrerit, massa at.</div>
+				<h2 class='services__bid-caption'>Eco-friendly</h2>
+				<p class='services__bid-description'>At the beginning of the company's foundation, one of the concepts was environmental care, and in the year of ecology this is even more noticeable, therefore all our offices adhere to these rules.</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<footer class='footer'>
+<footer class='footer' id='footer-anchor'>
 	<div class='footer__subscribe'>
 		<h2 class='footer__caption'>Subscribe to our newsletter</h2>
 		<form class='footer__form' action='https://echo.htmlacademy.ru' method='post'>
 			<input class='footer__input' type='text' placeholder='your@email.com' />
 			<button class='btn  btn-ellipse  btn-ellipse--subscribe' type='submit' value='search'>Subscribe</button>
-			<svg class='svg-sprites  svg-sprites__mailbox'><use xlink:href="svg-sprites/sprite-symbol.svg#mailbox"></use></svg>
+			<svg class='svg-button  svg-button--Xmedium  footer__mailbox'><use xlink:href="svg-sprites/sprite-symbol.svg#mailbox"></use></svg>
 		</form>
+
 	</div>
 	<div class='footer__info'>
 		<div class='footer__info-column'>
-			<h4 class='footer__list-caption'>Little Caption</h4>
+			<h4 class='footer__list-caption'>Company</h4>
 			<ul class='footer__list'>
-				<li>text-li-1</li>
-				<li>text-li-1</li>
-				<li>text-li-1</li>
-				<li>text-li-1</li>
-				<li>text-li-1</li>
+				<li><a class='footer__link' href='#a1'>About Us</a></li>
+				<li><a class='footer__link' href='#a2'>Careers</a></li>
+				<li><a class='footer__link' href='#a3'>Blog</a></li>
+				<li><a class='footer__link' href='#a4'>Press</a></li>
+				<li><a class='footer__link' href='#a5'>Brand Guidelines</a></li>
 			</ul>
 		</div>
 		<div class='footer__info-column'>
-			<h4 class='footer__list-caption'>Little Caption</h4>
+			<h4 class='footer__list-caption'>Developer</h4>
 			<ul class='footer__list'>
-				<li>text-li-1</li>
-				<li>text-li-1</li>
-				<li>text-li-1</li>
-				<li>text-li-1</li>
-				<li>text-li-1</li>
+				<li><a class='footer__link' href='#b1'>App</a></li>
+				<li><a class='footer__link' href='#b2'>Windows</a></li>
+				<li><a class='footer__link' href='#b3'>Mac</a></li>
+				<li><a class='footer__link' href='#b4'>Linux</a></li>
+				<li><a class='footer__link' href='#b5'>API</a></li>
 			</ul>
 		</div>
 		<div class='footer__info-column'>
 			<h3 class='footer__social-caption'>Follow us</h3>
 			<div class='footer__social-icon'>
-				<svg>
-					<use></use>
-				</svg>
-				<svg>
-					<use></use>
-				</svg>
-				<svg>
-					<use></use>
-				</svg>
-				<svg>
-					<use></use>
-				</svg>
+				<a class='footer__link-svg' href='https://www.facebook.com'><svg class='svg-public  svg-public--fb'><use xlink:href='svg-sprites/social-symbol.svg#fb'></use></svg></a>
+				<a class='footer__link-svg' href='https://twitter.com'><svg class='svg-public  svg-public--tw'><use xlink:href='svg-sprites/social-symbol.svg#tw'></use></svg></a>
+				<a class='footer__link-svg' href='https://plus.google.com'><svg class='svg-public  svg-public--gp'><use xlink:href='svg-sprites/social-symbol.svg#gp'></use></svg></a>
+				<a class='footer__link-svg' href='https://www.youtube.com'><svg class='svg-public  svg-public--yt'><use xlink:href='svg-sprites/social-symbol.svg#yt'></use></svg></a>
 			</div>
 			<p class='footer__copyright'>Copyright © All Rights reserved</p>
 		</div>
+
+
 	</div>
 </footer>
 

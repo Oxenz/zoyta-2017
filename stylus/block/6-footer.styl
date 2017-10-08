@@ -5,6 +5,7 @@
 	align-items center
 	background gray url(../img/bg-footer.jpg) no-repeat 0 5%
 	background-size cover
+	scroll-behavior smooth
 
 
 	&__subscribe
@@ -12,7 +13,7 @@
 		margin-top 50px
 		padding-bottom 50px
 		box-shadow 0px 1px 0px 0px rgba(255,255,255, 0.1)
-		outline 1px solid red
+
 
 	&__caption
 		font-size rem(24rem)
@@ -20,10 +21,12 @@
 		color white
 		text-align center
 
+
 	&__form
 		position relative
 		display flex
 		justify-content center
+
 
 	&__input
 		width 490px
@@ -33,14 +36,14 @@
 		border 1px solid rgba(255,255,255, 0.2)
 		border-radius 25px/30px
 		background-color rgba(255,255,255, 0.1)
-		color white
 		-webkit-appearance none
 		-moz-appearance none
 		-ms-appearance none
 		appearance none
-		outline none
-		font-size rem(16rem)
 		font-family 'GTM-Book'
+		font-size rem(16rem)
+		color white
+		outline none
 		box-shadow 1px 1px 2px 0px rgba(1,1,1, 0.3)
 		transition background-color 0.325s, border 0.325s
 
@@ -52,15 +55,18 @@
 			border 1px solid rgba(1,1,1, 1)
 			transition background-color 0.325s, border 0.325s
 
+
 	&__info
 		display flex
 		justify-content space-around
 		width 980px
-		background-color rgba(255, 10, 10, 0.5)
+		margin-top 40px
 
+	&__mailbox
+		top 22px
+		left 260px
+		fill white
 
-	&__info-column
-		color green
 
 	&__list-caption
 	&__social-caption
@@ -73,16 +79,55 @@
 		color white
 		box-shadow 0px 1px 0px 0px #534d4c
 
+
 	&__list
 		padding 0px
 		margin 0px
 		list-style none
 
-		li
-			font-family 'GTM-Book'
-			color #c0bebc
+
+	&__link
+		font-family 'GTM-Book'
+		color #c0bebc
+
+		&:visited
+			color colorGreen
+
+		&:active
+			color colorLightGray
+
+		&:hover
+			color colorRed
+
+			&:active
+				color #c1412e
 
 
+	&__social-icon
+		margin-top 10px
+		display flex
+		justify-content space-between
+
+
+	&__copyright
+		margin-top 55px
+		color white
+
+
+	&__link-svg
+		line-height rem(0rem)
+
+		&:hover .svg-public--fb
+			fill #4867aa
+
+		&:hover .svg-public--tw
+			fill #41abe1
+
+		&:hover .svg-public--gp
+			fill #dc4a38
+
+		&:hover .svg-public--yt
+			fill #fe021b
 
 
 .btn-ellipse--subscribe
@@ -95,9 +140,19 @@
 	padding 0px 10px
 	border-radius 22px/29px
 
-.svg-sprites__mailbox
-	position absolute
-	top 22px
-	left 260px
-	size(rem(20rem),rem(20rem))
 
+.svg-public
+	size(rem(30rem),rem(30rem))
+	fill white
+
+.svg-public--fb
+	transition fill .325s
+
+.svg-public--tw
+	transition fill .325s
+
+.svg-public--gp
+	transition fill .325s
+
+.svg-public--yt
+	transition fill .325s

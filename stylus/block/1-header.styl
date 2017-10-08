@@ -2,55 +2,77 @@
 	width 100%
 	background-image linear-gradient(to right, white rem(980rem), colorRed rem(980rem))
 
+
 .main-nav
 	display flex
 	width rem(980rem)
 	margin 0px auto
 
-.main-nav__list
-	position relative
-	width rem(980rem)
-	display flex
-	justify-content space-between
-	list-style none
-	margin 0px
-	padding 0px
 
-	li:first-child
-		margin-right auto
-
-	li:nth-last-of-type(3) a
-		padding-right 25px
+	&__list
+		position relative
+		width rem(980rem)
+		display flex
+		justify-content space-between
+		list-style none
+		margin 0px
+		padding 0px
 
 
-.main-nav__link
-	display block
-	padding 25.5px 15px
-	text-transform uppercase
-	background-color white
-	color colorLightGray
-	text-decoration none
+		li:first-child
+			margin-right auto
 
-.main-nav__link--down
-	padding 22px 20px 16px
-	background-color #e2dee0
 
-.svg-sprites__arrow-down
-	size(rem(30rem), rem(30rem))
+		li:nth-last-of-type(3) a
+			padding-right 25px
+
+
+	&__link
+		display block
+		padding 25.5px 15px
+		text-transform uppercase
+		background-color white
+		color colorLightGray
+		text-decoration none
+		transition color .1s
+
+
+		&:hover
+			color colorBlackGray
+
+
+		&:active
+			color colorLightRed
+
+
+	&__link--down
+		display flex
+		size(70px,75px)
+		padding 0px
+		box-sizing border-box
+		background-color #e2dee0
+
+		&:hover .main-nav__arrow-down
+			animation arrow-down 1.5s .15s infinite
+
+
+	&__arrow-down
+		size(rem(30rem), rem(30rem))
+		margin auto
+		fill white
+
 
 .logotype
 	size(150px, 75px)
 	vertical-align top
 
-.svg-sprites__user
+
+.main-nav__user
 	position absolute
 	top 28px
 	left 20px
 	size(rem(18rem), rem(18rem))
-	color white
-
-
-
+	fill white
 
 
 

@@ -30,6 +30,12 @@ body
 }
 
 
+//
+// <a> Link Style
+//
+
+
+
 // mast have img
 img
 	max-width 100%  // or width 100% но max-width лучше, так как не растянется больше чем свой оригинальный размер
@@ -135,3 +141,76 @@ svg
 .svg-star--big
 	width 22px
 	height 22px
+
+
+
+
+// [svg style]
+
+// global style
+
+.svg-button
+	position absolute
+	pointer-events none
+	size(rem(13rem), rem(13rem))  // base size
+
+
+.svg-wr
+	display flex
+	background-color transparent
+	border-radius 50%
+
+
+.svg
+	margin auto
+
+
+.svg-stroke
+	stroke-width 15px
+	stroke currentColor
+
+
+@keyframes arrow-down
+	0%
+		transform translateY(0px)
+		color colorGreen
+
+	50%
+		transform translateY(20px)
+
+	60%
+		opacity 0
+
+	100%
+		fill colorGreen
+		opacity 0
+
+
+@keyframes bord
+	28%
+		box-shadow 2px 2px 0px 0px colorGreen, 8px 7px 0px 0px #f3f1f2, 10px 9px 0px 0px red, -2px -2px 0px 0px black, -8px -7px 0px 0px #f3f1f2, -10px -9px 0px 0px red
+		border-bottom-color transparent
+
+	70%
+		box-shadow 2px 2px 0px 0px colorGreen, 8px 7px 0px 0px #f3f1f2, 10px 9px 0px 0px red, -2px -2px 0px 0px black, -8px -7px 0px 0px #f3f1f2, -10px -9px 0px 0px red
+		border-bottom-color transparent
+
+	100%
+		box-shadow 2px 2px 0px 0px colorGreen, 8px 7px 0px 0px #f3f1f2, 10px 9px 0px 0px red, -2px -2px 0px 0px black, -8px -7px 0px 0px #f3f1f2, -10px -9px 0px 0px red
+		border-bottom-color transparent
+
+
+@keyframes amaz
+	0%
+		box-shadow 4px 5px 0px -2px colorGreen, -4px -5px 0px -3px black
+		border-bottom-color transparent
+
+	50%
+		transform translateY(20px)
+
+	60%
+		opacity 0
+
+	100%
+		fill colorGreen
+		opacity 0
