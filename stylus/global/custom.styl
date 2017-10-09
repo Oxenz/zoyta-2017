@@ -168,71 +168,42 @@ svg
 
 // [animate 2]
 
+
 @keyframes bord-green
-	28%
-		box-shadow 2px 2px 0px 0px colorGreen, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
+	0%  // fix bug IE обязательно должен быть начальный кадр в виде [0%] или [from], в современных браузерах начальный кадр может опустить
+		box-shadow 0px 0px 0px 0px transparent
 
-	70%
+	28%,70%,100%
 		box-shadow 2px 2px 0px 0px colorGreen, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
-
-	100%
-		box-shadow 2px 2px 0px 0px colorGreen, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
 
 
 @keyframes bord-blue
-	28%
-		box-shadow 2px 2px 0px 0px colorBlue, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
+	0% // fix bug IE во что бы то ни стало должно быть указано начальное состояние box-shadow, порядок записии не имеет значения
+		box-shadow 0px 0px 0px 0px transparent
 
-	70%
+	28%,70%,100%
 		box-shadow 2px 2px 0px 0px colorBlue, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
-
-	100%
-		box-shadow 2px 2px 0px 0px colorBlue, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
 
 
 @keyframes bord-cyan
-	28%
-		box-shadow 2px 2px 0px 0px colorCyan, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
+	0% // fix bug IE обязательно должен быть начальный кадр и исходное свойство box-shadow, допустимо начинать как с [100%] / [to]
+		box-shadow 0px 0px 0px 0px transparent
 
-	70%
+	28%,70%,100%
 		box-shadow 2px 2px 0px 0px colorCyan, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
-
-	100%
-		box-shadow 2px 2px 0px 0px colorCyan, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
 
 
 @keyframes bord-orange
-	28%
-		box-shadow 2px 2px 0px 0px colorOrange, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
+	0% // fix bug IE обязательно должен быть начальный кадр, в IE 11 работает
+		box-shadow 0px 0px 0px 0px transparent
 
-	70%
+	28%,70%,100%
 		box-shadow 2px 2px 0px 0px colorOrange, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
-
-	100%
-		box-shadow 2px 2px 0px 0px colorOrange, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
 
 
 @keyframes bord-purple
-	28%
-		box-shadow 2px 2px 0px 0px colorPurple, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
+	0% // что бы box-shadow сработал должен быть указан начальный кадр с изначальным состоянием свойства box-shadow, формат цвета любой работающий в IE
+		box-shadow 0px 0px 0px 0px transparent
 
-	70%
+	28%,70%,100%
 		box-shadow 2px 2px 0px 0px colorPurple, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent
-
-	100%
-		box-shadow 2px 2px 0px 0px colorPurple, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
-		border-bottom-color transparent

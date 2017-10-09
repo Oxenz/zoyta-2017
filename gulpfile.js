@@ -1,36 +1,42 @@
 var gulp = require('gulp'),
 		stylus = require('gulp-stylus'),
 		browserSync = require('browser-sync'),
-		del = require('del'),
-		run = require('run-sequence'),
-		mincss = require('gulp-csso'),
-		rename = require("gulp-rename"),
-		notify = require('gulp-notify'),
-		imagemin = require('gulp-imagemin')
-		prefixer = require('gulp-autoprefixer'),
-		uglify = require('gulp-uglify'),
-		svgSprite = require('gulp-svg-sprite'),
-		plumber = require('gulp-plumber');
+		del = require('del'),  // функция удаления
+		run = require('run-sequence'),  // порядок загрузки
+		mincss = require('gulp-csso'),  // минификация CSS, но лучше попробывать СОВРЕМЕННЫЙ http://refresh-sf.com/ на основе Clean-CSS
+		rename = require("gulp-rename"),  // переименование файлов
+		notify = require('gulp-notify'),  // уведомления при ошибках, для W нужен Growl
+		imagemin = require('gulp-imagemin'),  // оптимизация img вкл. несколько модулей
+		prefixer = require('gulp-autoprefixer'),  // вендорные префиксы от Evil Martians
+		uglify = require('gulp-uglify'),  // минификация JS
+		svgSprite = require('gulp-svg-sprite'),  // создание спрайтов
+		plumber = require('gulp-plumber');  // сборщик ошибок
 
 
-// ver 1.1 [06.10.17]
+// ver 1.2 [09.10.17]
 
 // for Production
 
 gulp.task('clean', function() {
-	return del('build');
+	return del(['../app/**', '!../app']  // удаляет все в папке app, при этом не удаляя саму папку app
+		,{
+			force: true  // начинает удалять за пределами текущей dir
+		});
 });
 
 gulp.task('copy', function() {
 	return gulp.src([
-		'fonts/**/*.{woof,woff2}',
+		'fonts/**',
+		'!img/{pre,pre/**}',  // порядок вкл. и искл. не важен
 		'img/**',
 		'js/**',
+		'libs/**',
+		'svg-sprites/*.svg',
 		'*.html',
 		], {
-			base: "."
+			base: "."  // что бы копировались целыми папками
 		})
-	.pipe(gulp.dest('build'));
+	.pipe(gulp.dest('../app'));
 });
 
 gulp.task('stylus', function() {
@@ -41,23 +47,22 @@ gulp.task('stylus', function() {
 			cascade: false
 		}))
 		.pipe(mincss({
-			restructure: false,
+			restructure: false,  // что бы анализатор не разбивал и не связывал cелекторы как ему нравится
 		}))
 		.pipe(rename('style.min.css'))
-		.pipe(gulp.dest('build/css'))
+		.pipe(gulp.dest('../app/css'))
 		.pipe(browserSync.reload({stream: true}))
-
 });
 
 gulp.task('img-min', function() {
-	return gulp.src("build/img/**/*.{png,jpg,gif}")
+	return gulp.src("../app/img/**/*.{png,jpg,gif}")
 		.pipe(imagemin([
 			imagemin.optipng({optinizationLevel: 3}),
 			imagemin.jpegtran({progressive: true}),
 			imagemin.gifsicle({interlaced: true}),
 			imagemin.svgo({plugins: [{removeViewBox: true}]})
 		]))
-		.pipe(gulp.dest("build/img/opt"));
+		.pipe(gulp.dest("../app/img"));
 })
 
 gulp.task('js-min', function() {
@@ -66,24 +71,22 @@ gulp.task('js-min', function() {
 			.pipe(rename({
 				suffix: ".min"
 			}))
-			.pipe(gulp.dest('build/js'))
+			.pipe(gulp.dest('../app/js'))
 });
 
 gulp.task('bs', function() {
 	browserSync({
 		server: {
-			baseDir: 'build'
+			baseDir: '../app'  //запускаемся из папки app на 3000 порту
 		}
 	});
 })
 
 gulp.task('wt',['bs'], function() {
-	gulp.watch('stylus/**/*.styl', ['stylus']);
-	gulp.watch('build/*.html', browserSync.reload);
-	gulp.watch('js/**/*.js', browserSync.reload);
+	gulp.watch('../app/css/**/*.css', browserSync.reload);
+	gulp.watch('../app/*.html', browserSync.reload);
+	gulp.watch('../app/js/**/*.js', browserSync.reload);
 })
-
-
 
 gulp.task('build', function(fn) {
 	run('clean', 'copy', 'stylus', 'js-min', 'img-min', 'wt', fn);
@@ -97,10 +100,10 @@ gulp.task('build', function(fn) {
 gulp.task('dev-stylus', function() {
 	return gulp.src('stylus/style.styl')
 		.pipe(stylus())
-		.on('error', notify.onError())
+		.on('error', notify.onError())  // ловим ошибки .styl и не даем упасть серверу
 		.pipe(gulp.dest('css'))
 		.pipe(prefixer({
-			browsers: ['last 2 version'],
+			browsers: ['last 10 version'],
 			cascade: false
 		}))
 		.pipe(mincss({
@@ -145,8 +148,8 @@ gulp.task('spr-svg', function() {
 		},
 		mode: {
 			symbol: {
-				dest: '.',
-				sprite: 'sprite-symbol.svg'
+				dest: '.',  // по умолчанию создается папка css/svg/symbol, сейчас папка не создается
+				sprite: 'sprite-symbol.svg'  // навзание итогово спрайта
 			}
 		}
 	}))
