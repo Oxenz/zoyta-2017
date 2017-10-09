@@ -35,8 +35,10 @@ body
 //
 
 
+//
+// <img> Link Style
+//
 
-// mast have img
 img
 	max-width 100%  // or width 100% но max-width лучше, так как не растянется больше чем свой оригинальный размер
 	height auto
@@ -51,10 +53,6 @@ img
 	background-color transparent
 	cursor pointer
 
-
-.svg-sprites
-	width rem(40rem)
-	fill #fff
 
 .btn
 	position relative
@@ -77,10 +75,9 @@ img
 	cursor pointer
 
 
-
-// placeholder text
-// Добавить в снипет, это глобальные стили для цвет Плейсхолдеров
-
+//
+// <placeholder text> Link Style
+//
 
 input:-ms-input-placeholder  //for IE  (Глобально (:-ms-input-placeholder) не работает, нужно указывать цель)
 	color white
@@ -103,51 +100,8 @@ input:-ms-input-placeholder  //for IE  (Глобально (:-ms-input-placehold
 
 
 
-
-
-
-
-
-
-// svg
-svg
-	width 25px
-	height 25px
-
-.s1
-	margin-top 150px
-
-.s11
-	width 170px
-	outline 1px dashed red
-
-.svg-star
-	fill none
-	stroke-width 30px
-	stroke orange
-	margin-right -3px
-
-.svg-star--on
-	fill orange
-
-.svg-star--off
-	fill none
-
-.svg-star--small
-	width 16px
-	height 16px
-
-
-.svg-star--big
-	width 22px
-	height 22px
-
-
-
-
 // [svg style]
-
-// global style
+// [GLOBAL]
 
 .svg-button
 	position absolute
@@ -170,6 +124,33 @@ svg
 	stroke currentColor
 
 
+svg
+	width 25px
+	height 25px
+
+.svg-star
+	fill none
+	stroke-width 30px
+	stroke orange
+	margin-right -3px
+
+.svg-star--on
+	fill orange
+
+.svg-star--off
+	fill none
+
+.svg-star--small
+	width 16px
+	height 16px
+
+.svg-star--big
+	width 22px
+	height 22px
+
+
+// [animate 1]
+
 @keyframes arrow-down
 	0%
 		transform translateY(0px)
@@ -185,32 +166,73 @@ svg
 		fill colorGreen
 		opacity 0
 
+// [animate 2]
 
-@keyframes bord
+@keyframes bord-green
 	28%
-		box-shadow 2px 2px 0px 0px colorGreen, 8px 7px 0px 0px #f3f1f2, 10px 9px 0px 0px red, -2px -2px 0px 0px black, -8px -7px 0px 0px #f3f1f2, -10px -9px 0px 0px red
+		box-shadow 2px 2px 0px 0px colorGreen, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
 		border-bottom-color transparent
 
 	70%
-		box-shadow 2px 2px 0px 0px colorGreen, 8px 7px 0px 0px #f3f1f2, 10px 9px 0px 0px red, -2px -2px 0px 0px black, -8px -7px 0px 0px #f3f1f2, -10px -9px 0px 0px red
+		box-shadow 2px 2px 0px 0px colorGreen, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
 		border-bottom-color transparent
 
 	100%
-		box-shadow 2px 2px 0px 0px colorGreen, 8px 7px 0px 0px #f3f1f2, 10px 9px 0px 0px red, -2px -2px 0px 0px black, -8px -7px 0px 0px #f3f1f2, -10px -9px 0px 0px red
+		box-shadow 2px 2px 0px 0px colorGreen, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
 		border-bottom-color transparent
 
 
-@keyframes amaz
-	0%
-		box-shadow 4px 5px 0px -2px colorGreen, -4px -5px 0px -3px black
+@keyframes bord-blue
+	28%
+		box-shadow 2px 2px 0px 0px colorBlue, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
 		border-bottom-color transparent
 
-	50%
-		transform translateY(20px)
-
-	60%
-		opacity 0
+	70%
+		box-shadow 2px 2px 0px 0px colorBlue, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
 
 	100%
-		fill colorGreen
-		opacity 0
+		box-shadow 2px 2px 0px 0px colorBlue, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+
+@keyframes bord-cyan
+	28%
+		box-shadow 2px 2px 0px 0px colorCyan, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+	70%
+		box-shadow 2px 2px 0px 0px colorCyan, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+	100%
+		box-shadow 2px 2px 0px 0px colorCyan, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+
+@keyframes bord-orange
+	28%
+		box-shadow 2px 2px 0px 0px colorOrange, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+	70%
+		box-shadow 2px 2px 0px 0px colorOrange, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+	100%
+		box-shadow 2px 2px 0px 0px colorOrange, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+
+@keyframes bord-purple
+	28%
+		box-shadow 2px 2px 0px 0px colorPurple, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+	70%
+		box-shadow 2px 2px 0px 0px colorPurple, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent
+
+	100%
+		box-shadow 2px 2px 0px 0px colorPurple, 5px 5px 0px 0px #f3f1f2, 7px 7px 0px 0px red, -2px -2px 0px 0px black, -5px -5px 0px 0px #f3f1f2, -7px -7px 0px 0px red
+		border-bottom-color transparent

@@ -19,9 +19,6 @@
 		transition box-shadow 0.125s
 
 
-
-
-
 	&__box-extended
 		width rem(455rem)
 		position relative
@@ -29,7 +26,6 @@
 		background-color white
 		border-bottom 1px solid colorLightBorder
 		transition box-shadow 0.225s
-
 
 		.offer__img-wrapper
 			height 120px
@@ -55,49 +51,45 @@
 
 
 	&__box-extended.offer__box--house:hover
-		box-shadow 4px 5px 0px 2px colorGreen, -4px -5px 0px 0px black
+		animation bord-green 1s .1s forwards
 		border-bottom-color transparent
 
 	&__box-extended.offer__box--personal:hover
-		box-shadow 4px 5px 0px 2px colorBlue, -4px -5px 0px 0px black
+		animation bord-blue 1s .1s forwards
 		border-bottom-color transparent
 
 	&__box-extended.offer__box--education:hover
-		box-shadow 4px 5px 0px 2px colorCyan, -4px -5px 0px 0px black
+		animation bord-cyan 1s .1s forwards
 		border-bottom-color transparent
 
 	&__box-extended.offer__box--music:hover
-		box-shadow 4px 5px 0px 2px colorOrange, -4px -5px 0px 0px black
+		animation bord-orange 1s .1s forwards
 		border-bottom-color transparent
 
 	&__box-extended.offer__box--train:hover
-		box-shadow 4px 5px 0px 2px colorPurple, -4px -5px 0px 0px black
+		animation bord-purple 1s .1s forwards
 		border-bottom-color transparent
 
 
 	&__box.offer__box--house:hover
-		// box-shadow 4px 5px 0px -2px colorGreen, -4px -5px 0px -3px black
-		// border-bottom-color transparent
-		animation bord 2s .1s forwards
+		border-bottom-color transparent
+		animation bord-green 1s .1s forwards
 
 	&__box.offer__box--personal:hover
-		box-shadow 4px 5px 0px 2px colorBlue, -4px -5px 0px 2px black
+		animation bord-blue 1s .1s forwards
 		border-bottom-color transparent
 
 	&__box.offer__box--education:hover
-		box-shadow 4px 5px 0px 2px colorCyan, -4px -5px 0px 2px black
+		animation bord-cyan 1s .1s forwards
 		border-bottom-color transparent
 
 	&__box.offer__box--music:hover
-		box-shadow 4px 5px 0px 2px colorOrange, -4px -5px 0px 0px black
+		animation bord-orange 1s .1s forwards
 		border-bottom-color transparent
 
 	&__box.offer__box--train:hover
-		box-shadow 4px 5px 0px 2px colorPurple, -4px -5px 0px 0px black
+		animation bord-purple 1s .1s forwards
 		border-bottom-color transparent
-
-
-
 
 
 	&__box--house .offer__price
@@ -151,10 +143,6 @@
 
 	&__box--education
 		color colorCyan
-
-
-
-
 
 
 	&__caption
@@ -276,10 +264,6 @@
 		font-family 'GTM-Bold'
 		color colorBlackGray
 		text-decoration none
-
-
-
-
 
 
 	&__load-more
