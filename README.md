@@ -3,9 +3,13 @@
 ***
 ##### Коротко о главном
 `Responsive design maket together with flexible gulp config + desktop first + preprocessorCSS + git + Flexbox + BEM-nameing + svg-sprites`
-***
+***   
 
-_Для сборки используем, комманду_ `gulp dev` / `gulp build`
+## Сборка :checkered_flag: 
+
+Используем комманды `gulp dev` / `gulp build`   
+
+---
 
 Проект состоит из index.html
 
