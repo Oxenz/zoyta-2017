@@ -3,7 +3,7 @@ html
 	line-height base-line-height
 
 body
-	font-family 'GTM-Medium'
+	font-family 'GTM-Medium', 'Arrial Narrow', calibri, 'Trebuchet MS', sans-serif
 	color black
 	background-color colorBg
 	font-size font-size  //14px
@@ -46,7 +46,7 @@ img
 
 .load-more
 	position relative
-	font-family 'GTM-Medium'
+	font-family 'GTM-Medium', Arial, Calibri, 'Trebuchet MS', sans-serif
 	color colorBlackGray
 	line-height rem(28rem)
 	border none
@@ -69,7 +69,7 @@ img
 	// text-overflow ellipsis
 	overflow-wrap break-word
 	word-wrap break-word
-	font-family 'GTM-Medium', Arial, Verdana, sans-serif
+	font-family 'GTM-Medium', Arrial, Calibri, 'Trebuchet MS', sans-serif
 	background-color colorRed
 	color white
 	cursor pointer
@@ -97,6 +97,18 @@ input:-ms-input-placeholder  //for IE  (Глобально (:-ms-input-placehold
 ::-webkit-input-placeholder
 	color white
 	font-size 16px
+
+
+//
+// <Default arrow> <select> Style
+// Убираем глобально для всех select стандартне стрелки во всех браузерах
+
+select
+	appearance none // -webkit- -moz- -o-
+
+select::-ms-expand
+	display none // IE 10+
+
 
 
 
