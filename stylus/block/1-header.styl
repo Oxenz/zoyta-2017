@@ -3,9 +3,9 @@
 	background-image linear-gradient(to right, white rem(980rem), colorRed rem(980rem))
 
 
+
 .main-nav
-	display flex
-	width rem(980rem)
+	max-width 980px
 	margin 0px auto
 
 
@@ -17,9 +17,9 @@
 
 	&__list
 		position relative
-		width rem(980rem)
 		display flex
 		justify-content space-between
+		flex-wrap wrap
 		list-style none
 		margin 0px
 		padding 0px
@@ -68,14 +68,154 @@
 		fill white
 
 
-.logotype
-	size(150px, 75px)
-	vertical-align top
+	&__user
+		position absolute
+		top 28px
+		left 20px
+		size(rem(18rem), rem(18rem))
+		fill white
 
 
-.main-nav__user
-	position absolute
-	top 28px
-	left 20px
-	size(rem(18rem), rem(18rem))
-	fill white
+.mobile-menu
+	display none
+
+
+#mobile-menu
+	display none
+
+
+
+// Desktop-First
+// От большого к меньшему
+// Используем @media (max-width)
+
+
+@media (max-width: 1040px)
+	.logotype
+		max-width 140px
+
+
+	.main-nav__caption-img
+		max-width 55px
+
+
+	.main-nav__list li:first-child
+		margin-right 0px
+
+
+	.main-nav__list li:nth-last-of-type(2)
+		margin-left auto
+
+
+@media (max-width: 835px)
+	.main-nav__link
+		padding-left 10px
+		padding-right 10px
+
+
+@media (max-width: 790px)
+	.main-nav__link
+		font-size 12px
+
+
+@media (max-width: 735px)
+	.btn__login
+		width 100%
+
+
+	.main-nav__user
+		display none
+
+
+@media (max-width: 655px)
+	.btn__login
+		width 40px
+		font-size 0px
+
+
+	.main-nav__user
+		display block
+		left 10px
+
+
+	.main-nav__link--down
+		width auto
+
+
+@media (max-width: 605px)
+	.main-nav__link
+		font-size 10px
+
+
+@media (max-width: 545px)
+	.main-nav__link
+		padding-left 5px
+		padding-right 5px
+
+
+@media (max-width: 490px)
+	.main-nav li:nth-last-of-type(3) a
+		padding-right 5px
+
+
+// mobile
+@media (max-width: 470px)
+	.mobile-menu
+		display block
+		background-color colorRed
+		width 100%
+		height 75px
+
+
+	.main-nav__list
+		display none
+
+
+	#mobile-menu:checked ~ .main-nav__list
+		display block
+
+
+	.main-nav__caption-img
+		position absolute
+		top -75px
+		left 0px
+		background-color white
+
+
+	.mobile-menu::before
+		content '☰'
+		font-size 3rem
+		position absolute
+		width 30px
+		height 0px
+		top 22px
+		left calc(50% - 31px)
+
+
+	.mobile-menu::after
+		content '☰'
+		font-size 3rem
+		position absolute
+		width 30px
+		height 0px
+		top 22px
+		left calc(56% - 31px)
+
+
+	.main-nav__link
+		font-size 2rem
+
+
+	.main-nav__link--down
+		width 100%
+
+
+	.btn__login
+		width 100%
+		max-width 100%
+		text-align center
+		font-size inherit
+
+
+	.main-nav__user
+		left 35%

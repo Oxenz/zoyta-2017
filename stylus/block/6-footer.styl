@@ -9,7 +9,8 @@
 
 
 	&__subscribe
-		width 980px
+		max-width 980px
+		width 100%
 		margin-top 50px
 		padding-bottom 50px
 		box-shadow 0px 1px 0px 0px rgba(255,255,255, 0.1)
@@ -23,6 +24,10 @@
 
 
 	&__form
+		max-width 490px
+		box-sizing border-box
+		margin 0px auto
+		padding 0px 20px
 		position relative
 		display flex
 		justify-content center
@@ -32,7 +37,7 @@
 		width 490px
 		max-height 60px
 		box-sizing border-box
-		padding 20px 150px 20px 50px
+		padding 20px 153px 20px 50px
 		border 1px solid rgba(255,255,255, 0.2)
 		border-radius 25px/30px
 		background-color rgba(255,255,255, 0.1)
@@ -53,14 +58,15 @@
 
 
 	&__info
-		display flex
-		justify-content space-around
 		width 980px
 		margin-top 40px
+		display flex
+		justify-content space-around
+
 
 	&__mailbox
 		top 22px
-		left 260px
+		left 30px
 		fill white
 
 
@@ -129,7 +135,7 @@
 .btn-ellipse--subscribe
 	position absolute
 	top 5px
-	right 250px
+	right 25px
 	font-size rem(14rem)
 	max-height 50px
 	min-height 50px
@@ -140,6 +146,7 @@
 .svg-public
 	size(rem(30rem),rem(30rem))
 	fill white
+
 
 .svg-public--fb
 	transition fill .325s
@@ -152,3 +159,109 @@
 
 .svg-public--yt
 	transition fill .325s
+
+
+
+// Desktop-First
+// От большого к меньшему
+// Используем @media (max-width)
+
+
+@media (max-width: 1100px)
+	.footer__info
+		width 100%
+		max-width 980px
+
+
+@media (max-width: 880px)
+	.footer__info
+		width 100%
+
+
+@media (max-width: 530px)
+	.footer__input
+		width 100%
+
+
+	.footer__info-column:last-child
+		width 34%
+		text-align center
+
+
+	.footer__copyright
+		margin-top 35px
+
+
+	.svg-public
+		size(rem(25rem),rem(25rem))
+
+
+// mobile от 0px до 360px
+@media (max-width: 360px)
+	.footer
+		height auto
+
+
+	.footer__subscribe
+		max-width 320px
+
+
+	.footer__input
+		max-width 320px
+		padding 20px  122px 20px 35px
+
+
+	.btn-ellipse--subscribe
+		max-width 115px
+
+
+	input:-ms-input-placeholder
+		font-size 12px
+
+	input::-ms-input-placeholder
+		font-size 12px
+
+	input::-moz-placeholder
+		font-size 12px
+
+	input::-webkit-input-placeholder
+		font-size 12px
+
+	// в качестве экспиримента написать JS добавляющий/удаляющий классы в зависимости от ширинны экрана
+	// который будет для .footer__mailbox добавлять нужный класс с размерами SVG
+
+
+	.footer__info
+		max-width 360px
+		flex-wrap wrap
+
+
+	.footer__info-column:last-child
+		width auto
+
+
+	.footer__social-caption
+		display table
+		margin 30px auto 15px
+
+
+	.footer__copyright
+		margin-top 30px
+
+
+	.svg-public
+		size(rem(35rem),rem(35rem))
+
+
+// mobile от 0px до 320px
+@media (max-width: 340px)
+	.footer__form
+		max-width 310px
+		margin 0 auto
+
+
+	.footer__input
+		max-width 310px
+
+
+

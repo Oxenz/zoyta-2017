@@ -54,6 +54,11 @@ img
 	cursor pointer
 
 
+//
+// <button> Style
+//
+
+
 .btn
 	position relative
 	border none
@@ -73,6 +78,31 @@ img
 	background-color colorRed
 	color white
 	cursor pointer
+
+.btn-ellipse
+	width 145px
+	box-sizing border-box
+	border-radius 35px/36px
+	background-color colorRed
+	font-size rem(18rem)
+	line-height rem(48rem)
+	box-shadow inset 0px -3px 0px 0px #c1412a
+	transition background-color 0.325s, box-shadow 0.225s
+
+
+	&:hover
+		background-color #c1412e
+		box-shadow inset 0px -3px 0px 1px #b3311e
+
+	&:active
+		background-color #a42b19
+		box-shadow inset 0px -3px 0px 1px #a42b19
+		transition background-color 0.125s, box-shadow 0.125s
+
+
+
+
+
 
 
 //
@@ -114,6 +144,19 @@ select::-ms-expand
 
 // [svg style]
 // [GLOBAL]
+
+
+// Размер контейнера SVG
+@media (max-width: 140px)
+
+	#logotype-text
+		display none
+
+
+.logotype
+	size(150px, 75px)
+	vertical-align top
+
 
 .svg-button
 	position absolute

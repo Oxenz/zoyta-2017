@@ -5,10 +5,12 @@
 	align-items center
 	margin-bottom 60px
 
+
 	&__caption-wrapper
 		width 400px
 		margin-bottom 50px
 		text-align center
+
 
 	&__caption
 		margin-bottom 5px
@@ -16,11 +18,13 @@
 		font-weight 400
 		color colorBlackGray
 
+
 	&__title
 		margin-top 0px
 		font-family 'GTM-Book', Arrial, Calibri, 'Trebuchet MS', sans-serif
 		font-size rem(16rem)
 		color colorLightGray
+
 
 	&__tag
 		width rem(815rem)
@@ -186,3 +190,138 @@
 .svg-wr--services-bid .svg--lightning
 .svg-wr--services-bid .svg--leaf
 		size(rem(30rem),rem(30rem))
+
+
+
+// Desktop-First
+// От большого к меньшему
+// Используем @media (max-width)
+
+
+@media (max-width: 830px)
+	.services__tag
+		width 75%
+		min-width 540px
+
+	.svg-wr--services:not(:last-of-type)::before
+	.svg-wr--services:not(:last-of-type)::after
+		display none
+
+	.services__bid-wrapper
+		width 80%
+
+
+@media (max-width: 790px)
+	.services__bid-icon
+		display none
+
+
+	.services__bid-description
+		padding-right 25px
+
+
+@media (max-width: 665px)
+	.services__bid-wrapper
+		flex-direction column
+
+
+	.services__bid-first
+	.services__bid-second
+		flex-basis auto
+
+
+@media (max-width: 580px)
+	.services__tag
+		min-width 80%
+
+
+	.svg-wr--services
+		size(rem(75rem),rem(75rem))
+
+
+		.svg--house
+			size(rem(40rem),rem(40rem))
+
+		.svg--personal
+			size(rem(40rem),rem(40rem))
+
+		.svg--education
+			size(rem(40rem),rem(40rem))
+
+		.svg--music
+			size(rem(40rem),rem(40rem))
+
+		.svg--train
+			size(rem(40rem),rem(40rem))
+
+
+
+@media (max-width: 440px)
+	.services__caption-wrapper
+		width 100%
+
+
+	.svg-wr--services
+		size(rem(50rem),rem(50rem))
+
+
+		.svg--house
+			size(rem(30rem),rem(30rem))
+
+		.svg--personal
+			size(rem(30rem),rem(30rem))
+
+		.svg--education
+			size(rem(30rem),rem(30rem))
+
+		.svg--music
+			size(rem(30rem),rem(30rem))
+
+		.svg--train
+			size(rem(30rem),rem(30rem))
+
+
+// mobile от 0px до 360px
+@media (max-width 360px)
+	.services__caption-wrapper
+		max-width 360px
+		margin-bottom 25px
+
+
+	.services__caption
+		font-size 20px
+		padding 0 15px
+
+
+	.services__title
+		font-size 12px
+
+
+	.services__tag
+		flex-wrap wrap
+		min-width 310px
+		justify-content center
+
+
+	.svg-wr--services
+		margin-left 10px
+
+
+	.services__bid:nth-child(2n+2) .services__bid-caption
+		text-align right
+
+
+	.services__bid:nth-child(2n+2) .services__bid-description
+		padding-right 0px
+		text-align right
+
+
+// mobile от 0px до 320px
+@media (max-width: 330px)
+	.services__caption
+		font-size 18px
+		padding 0px
+
+
+	.services__title
+		font-size 11px

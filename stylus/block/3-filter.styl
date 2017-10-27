@@ -1,6 +1,6 @@
 .filter
 	width 100%
-	height 65px
+	min-height 65px
 	background-color white
 	margin-bottom 45px
 	border-bottom 1px solid #e2dee0
@@ -39,7 +39,6 @@
 	&__link-active
 		color colorRed
 
-
 		&:hover
 			color colorRed
 
@@ -65,7 +64,7 @@
 
 	&__arrow-down
 		top 14px
-		left 85px
+		right 22px
 		fill colorLightGray
 
 
@@ -98,7 +97,6 @@
 		font-size rem(12rem)
 		font-family 'GTM-Medium', Arial, Calibri, 'Trebuchet MS', sans-serif
 
-
 		&:hover
 			border 1px solid colorLightGray
 			transition border 0.215s
@@ -109,6 +107,7 @@
 			background-color #e2dee0
 			font-size rem(14rem)
 			font-weight normal
+
 
 
 .btn-ellipse--filter
@@ -128,6 +127,7 @@
 		background-color transparent
 		box-shadow none
 		border 1px solid colorLightGray
+
 
 
 .svg-wr--filter
@@ -155,3 +155,52 @@
 
 .svg-wr--filter .svg--train
 	size(rem(20rem),rem(20rem))
+
+
+
+// Desktop-First
+// От большого к меньшему
+// Используем @media (max-width)
+
+
+@media (max-width: 995px)
+	.filter__inner
+		width calc(100% - 25px * 2)
+		padding 0 25px
+
+
+@media (max-width: 985px)
+	.filter__time
+		max-width 220px
+
+
+	.filter__link
+		font-size 10px
+
+
+@media (max-width: 860px)
+	.filter__tag-name
+		font-size 0px
+
+
+	.filter__tag
+		max-width 280px
+
+
+@media (max-width: 809px)
+	.filter__inner
+		justify-content space-around
+		padding-bottom 20px
+
+
+@media (max-width: 529px)
+	.filter__time
+		max-width 300px
+
+
+	.filter__link
+		font-size 12px
+
+
+	.filter__location
+		padding-bottom 20px
