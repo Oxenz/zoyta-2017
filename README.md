@@ -24,4 +24,6 @@
 	* Отдельное внимание стоит уделить веб графики — SVG, все иконки в векторе, построены на symbols-SVG-спрайте который подключается как внешний (#external) файл, это дает возможность создание неограниченного количества слепков нужных иконок и управлением стилями через CSS, но для работы в любимом всеми IE используется библиотека svg4everybody, если нужно обойтись без JS нужно использовать другой способ  #fragment identifiers связанный с встраиванием в тело html символьного спрайта с последующим обращением к нему через `<use>` thx SaraSoueidan :thumbsup:
 	* Normalize.css лучше Reset.css все файлы .css правильно минифицированны
 
-![maket-image1](https://github.com/Oxenz/zoyta-2017/blob/master/img/pre/index-zoyta-2017.jpg "Макет главной страницы index.html")
+![maket-desktop](https://github.com/Oxenz/zoyta-2017/blob/master/img/pre/index-desktop-zoyta-2017.jpg "Макет главной страницы index.html")
+![maket-mobile](https://github.com/Oxenz/zoyta-2017/blob/master/img/pre/index-mob-zoyta-2017.png "Макет главной страницы index.html")
+![maket-tablet](https://github.com/Oxenz/zoyta-2017/blob/master/img/pre/index-tablet-zoyta-2017.png "Макет главной страницы index.html")
